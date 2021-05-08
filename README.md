@@ -1,4 +1,5 @@
 ![Dart CI status](https://github.com/zinh/programming_exercises/actions/workflows/dart.yml/badge.svg)
+![Dart CI status](https://github.com/zinh/programming_exercises/actions/workflows/python.yml/badge.svg)
 
 ## Programming exercises
 
