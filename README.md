@@ -1,3 +1,5 @@
+![https://github.com/zinh/programming_exercises/actions/workflows/dart.yml/badge.svg](Dart CI status)
+
 ## Programming exercises
 
 Used to quickly catch up with a new programming language
