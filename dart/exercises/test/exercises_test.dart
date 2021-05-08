@@ -14,8 +14,8 @@ void main() {
 
   test('third', () {
     expect(third([1,2,3]), equals(3));
-    expect(third([1,2]), throwsArgumentError);
-    expect(third([1]), throwsArgumentError);
-    expect(third([]), throwsArgumentError);
+    expect(() => third([1,2]), throwsArgumentError);
+    expect(() => third([1]), throwsArgumentError);
+    expect(() => third([]), throwsArgumentError);
   });
 }
