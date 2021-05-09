@@ -52,7 +52,7 @@ Use unfold to implement:
 - map f
 - iterate f
 
-13. Define `altMap :: (a -> b) -> (a -> b) -> [a] -> [b], eg:
+13. Define `altMap :: (a -> b) -> (a -> b) -> [a] -> [b]`, eg:
 
 ```haskell
 altMap (+10) (+100) [0,1,2,3,4] = [10,101,12,103,14]
@@ -66,3 +66,16 @@ by combining one or more numbers from the sequence using addition, subtraction, 
 Each number in the sequence can only be used at most once in the expression, and all of the numbers involved,
 including intermediate values, must be positive natural numbers (1, 2, 3, . . .).
 In particular, the use of negative numbers, zero, and proper fractions such as 2 ÷ 3, is not permitted.
+
+15. Implement Game of life
+
+The game models a simple evolutionary system based on cells, and is played on a two-dimensional board. Each square on the board is either empty, or contains a single living cell.
+Each internal square on the board has eight immediate neighbours.
+
+Given an initial configuration of the board, the next generation of the board is given by simultaneously applying the following rules to all squares:
+
+- a living cell survives if it has precisely two or three neighbouring squares that contain living cells, and
+- an empty square gives birth to a living cell if it has precisely three neighbours that contain living cells, and remains empty otherwise.
+
+16. Write a calculator that receive an expression(allow operations: +, -, \*, /, parenthesis) and calculate the result.
+Extends to other operators: exponentation, logarithm, trigonometry functions.
