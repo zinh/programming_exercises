@@ -17,5 +17,20 @@ T third<T>(List<T> lst) {
 }
 
 bool luhn(String card) {
-  return false;
+  var chars = card.runes;
+  var n = chars.length;
+  var shouldDouble = false;
+  var sum = 0;
+  for(var i = n - 1; i >= 0; i--) {
+    var c = chars.elementAt(i);
+    if (c < 48 || c > 58)
+      throw ArgumentError("invalid card number");
+    var val = c - 48;
+    if (shouldDouble)
+      sum += ((val * 2) % 9);
+    else
+      sum += val;
+    shouldDouble = !shouldDouble;
+  }
+  return (sum % 10 == 0);
 }

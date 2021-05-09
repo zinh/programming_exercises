@@ -18,4 +18,10 @@ void main() {
     expect(() => third([1]), throwsArgumentError);
     expect(() => third([]), throwsArgumentError);
   });
+
+  test('luhn', () {
+    expect(luhn("123"), equals(false));
+    expect(luhn("4539027455502281"), equals(true));
+    expect(() => luhn("0ab1"), throwsArgumentError);
+  });
 }
