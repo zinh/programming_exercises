@@ -34,3 +34,19 @@ bool luhn(String card) {
   }
   return (sum % 10 == 0);
 }
+
+int sumOfSquares(int limit) {
+  var sum = 0;
+  for(int i = 1; i <= limit; i++)
+    sum += i*i;
+  return sum;
+}
+
+List<T> replicate<T>(int t, T val) {
+  if (t < 0)
+    throw ArgumentError("should have positive limit");
+  var lst = <T>[];
+  for (var i = 0; i < t; i++)
+    lst.add(val);
+  return lst;
+}

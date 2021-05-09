@@ -57,3 +57,12 @@ Use unfold to implement:
 ```haskell
 altMap (+10) (+100) [0,1,2,3,4] = [10,101,12,103,14]
 ```
+
+14. The countdown problem
+
+Given a sequence of numbers and a target number, attempt to construct an expression whose value is the target,
+by combining one or more numbers from the sequence using addition, subtraction, multiplication, division and parentheses.
+
+Each number in the sequence can only be used at most once in the expression, and all of the numbers involved,
+including intermediate values, must be positive natural numbers (1, 2, 3, . . .).
+In particular, the use of negative numbers, zero, and proper fractions such as 2 ÷ 3, is not permitted.

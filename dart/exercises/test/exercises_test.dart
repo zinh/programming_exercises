@@ -24,4 +24,10 @@ void main() {
     expect(luhn("4539027455502281"), equals(true));
     expect(() => luhn("0ab1"), throwsArgumentError);
   });
+
+  test('replicate', () {
+    expect(replicate(4, true), equals([true, true, true, true]));
+    expect(replicate(0, true), equals([]));
+    expect(() => replicate(-1, true), throwsArgumentError);
+  });
 }
