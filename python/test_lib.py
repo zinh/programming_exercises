@@ -9,6 +9,7 @@ class HalveTest(unittest.TestCase):
 
         with self.assertRaises(BaseException, msg = "list should have even length"):
             halve([1,2,3])
+
     def test_palidrome(self):
         self.assertEqual(True, is_palindrome(101))
         self.assertEqual(False, is_palindrome(1010))
