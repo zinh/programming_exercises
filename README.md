@@ -35,6 +35,9 @@ that implements Euclid’s algorithm for calculating the greatest common divisor
 if the two numbers are equal, this number is the result; otherwise, the smaller number is subtracted from the larger,
 and the same process is then repeated.
 
+10. Given an integer x, return true if x is palindrome integer.
+An integer is a palindrome when it reads the same backward as forward. For example, 121 is palindrome while 123 is not.
+
 10. Implement merge sort
 
 11. Define `dec2int :: [Int] -> Int` using fold. Eg: `dec2int [2 3 4 5] = 2345`
