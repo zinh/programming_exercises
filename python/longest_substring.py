@@ -1,10 +1,8 @@
 def longest_substring(s: str) -> int:
-    print("--")
     pos : int = 0
     max_len : int = 0
     current_substring : list[str] = []
     while True:
-        print(current_substring)
         if pos >= len(s):
             return max_len
         c = s[pos]
