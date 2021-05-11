@@ -61,6 +61,10 @@ Use unfold to implement:
 altMap (+10) (+100) [0,1,2,3,4] = [10,101,12,103,14]
 ```
 
+14. Longest Substring Without Repeating Characters
+
+Given a string s, find the length of the longest substring without repeating characters.
+
 14. The countdown problem
 
 Given a sequence of numbers and a target number, attempt to construct an expression whose value is the target,

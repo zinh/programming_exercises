@@ -11,6 +11,3 @@ def is_palindrome(x: int) -> bool:
         n = n * 10 + digit;
         x = x // 10;
     return n == original;
-
-# if __name__=="__main__":
-#     print(is_palindrome(101))
