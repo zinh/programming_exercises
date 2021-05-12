@@ -1,3 +1,5 @@
+from typing import Dict
+
 def longest_substringv1(s: str) -> int:
     pos : int = 0
     max_len : int = 0
@@ -18,7 +20,7 @@ def longest_substringv1(s: str) -> int:
         pos += 1
     return len(current_substring)
 
-def longest_substring(s: str) -> int:
+def longest_substringv2(s: str) -> int:
     chars = [0] * 128
     left = right = 0
     res = 0
@@ -32,3 +34,20 @@ def longest_substring(s: str) -> int:
         res = max(res, right - left + 1)
         right += 1
     return res
+
+class Solution:
+    def longest_substring(s: str) -> int:
+        m = [-1] * 128
+        left = right = 0
+        res = 0
+        while right < len(s):
+            c_right = ord(s[right])
+            if m[c_right] >= left:
+                left = m[c_right] + 1
+            res = max(res, right - left + 1)
+            m[c_right] = right
+            right += 1
+        return res
+
+if __name__ == "__main__":
+    print(longest_substring("abcabcbb"))
