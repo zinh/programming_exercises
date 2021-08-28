@@ -17,9 +17,12 @@ class PriorityQueue:
             return
         else:
             self._max_heapify_up(leaf_idx)
+        # print(self.queue)
 
     def min(self):
         """The smallest element in the queue."""
+        if len(self.queue) == 0:
+            return None
         return self.queue[0]
 
     def pop(self):
@@ -41,6 +44,7 @@ class PriorityQueue:
         self.queue[0] = self.queue[idx - 1]
         del self.queue[idx - 1]
         self._max_heapify_down(0)
+        # print(val, self.queue)
         return val
 
     def _max_heapify_up(self, idx):
@@ -55,15 +59,16 @@ class PriorityQueue:
         if idx >= len(self.queue) // 2:
             return
 
-        left = idx * 2
-        right = idx * 2 + 1
+        left = idx * 2 + 1
+        right = idx * 2 + 2
 
-        if self.queue[idx] > self.queue[left]:
-            swap_idx = left
-        elif self.queue[idx] > self.queue[right]:
+        if self.queue[idx] <= self.queue[left]:
+            if right >= len(self.queue) or self.queue[idx] <= self.queue[right]:
+                return
+
+        swap_idx = left
+        if right < len(self.queue) and self.queue[swap_idx] > self.queue[right]:
             swap_idx = right
-        else:
-            return
 
         self.queue[idx], self.queue[swap_idx] = self.queue[swap_idx], self.queue[idx]
         self._max_heapify_down(swap_idx)
