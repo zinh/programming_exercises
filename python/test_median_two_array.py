@@ -2,6 +2,7 @@ import unittest
 from median_two_array import Solution
 
 class TestMedianTwoArray(unittest.TestCase):
+    @unittest.skip("skip")
     def test_median_two_array(self):
         median = Solution()
         # [1,2,3] -> 2
